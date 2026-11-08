@@ -1,0 +1,38 @@
+{
+  "name": "qrforge-api",
+  "version": "1.0.0",
+  "description": "QRForge API — Smart QR Code, Custom Branding & Payload Generator. Ultra-fast, 100% in-memory microservice.",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "test": "node --test test/api.test.js"
+  },
+  "keywords": [
+    "qr-code",
+    "qrcode-generator",
+    "svg-qr",
+    "wifi-qr",
+    "vcard-qr",
+    "crypto-qr",
+    "microservice",
+    "rapidapi",
+    "in-memory"
+  ],
+  "author": "artuturoh",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "supertest": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
