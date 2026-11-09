@@ -1,5 +1,5 @@
 export function getLandingHtml() {
-  const RAPIDAPI_PLAYGROUND_URL = 'https://rapidapi.com/artuturoh/api/qrforge-smart-qr-code-and-custom-branding-generator/playground';
+  const RAPIDAPI_URL = 'https://rapidapi.com/artuturoh/api/qrforge-smart-qr-code-and-custom-branding-generator';
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -206,7 +206,15 @@ export function getLandingHtml() {
       font-size: 1.125rem;
       color: var(--text-muted);
       max-width: 680px;
-      margin: 0 auto 32px;
+      margin: 0 auto 24px;
+    }
+
+    .hero-cta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 36px;
     }
 
     /* Playground Grid */
@@ -534,7 +542,7 @@ export function getLandingHtml() {
         <span>QRForge API</span>
       </div>
       <div class="header-actions">
-        <a href="${RAPIDAPI_PLAYGROUND_URL}" target="_blank" rel="noopener noreferrer" class="btn btn-rapidapi">
+        <a href="${RAPIDAPI_URL}" target="_blank" rel="noopener noreferrer" class="btn btn-rapidapi">
           ⚡ Connect on RapidAPI
         </a>
       </div>
@@ -550,6 +558,11 @@ export function getLandingHtml() {
       </div>
       <h1>Smart QR Code &amp; <span class="highlight">Custom Branding</span> Engine</h1>
       <p>Generate high-density, production-grade QR codes with built-in payload templates (Wi-Fi, vCard, WhatsApp, Crypto), centered branding badges, and batch rendering.</p>
+      <div class="hero-cta">
+        <a href="${RAPIDAPI_URL}" target="_blank" rel="noopener noreferrer" class="btn btn-rapidapi" style="padding: 12px 24px; font-size: 0.95rem;">
+          ⚡ Subscribe on RapidAPI Hub
+        </a>
+      </div>
     </section>
 
     <!-- Interactive Live Playground -->
@@ -681,7 +694,7 @@ export function getLandingHtml() {
 
   <footer>
     <div class="container">
-      QRForge API &copy; 2026. Powered by <a href="${RAPIDAPI_PLAYGROUND_URL}" target="_blank" rel="noopener noreferrer">RapidAPI Hub</a>. All rights reserved.
+      QRForge API &copy; 2026. Powered by <a href="${RAPIDAPI_URL}" target="_blank" rel="noopener noreferrer">RapidAPI Hub</a>. All rights reserved.
     </div>
   </footer>
 
@@ -689,7 +702,7 @@ export function getLandingHtml() {
     (function() {
       let currentFormat = 'svg';
       let lastResult = null;
-      const RAPIDAPI_PLAYGROUND_URL = '${RAPIDAPI_PLAYGROUND_URL}';
+      const RAPIDAPI_URL = '${RAPIDAPI_URL}';
 
       const typeSelect = document.getElementById('typeSelect');
       const dynamicFields = document.getElementById('dynamicFields');
@@ -736,7 +749,7 @@ export function getLandingHtml() {
         url: () => \`
           <div class="form-group">
             <label>Target URL</label>
-            <input type="text" id="field_url" value="\${RAPIDAPI_PLAYGROUND_URL}" placeholder="https://example.com">
+            <input type="text" id="field_url" value="\${RAPIDAPI_URL}" placeholder="https://example.com">
           </div>
         \`,
         wifi: () => \`
@@ -866,7 +879,7 @@ export function getLandingHtml() {
               amount: document.getElementById('field_cr_amount').value
             };
           default:
-            return RAPIDAPI_PLAYGROUND_URL;
+            return RAPIDAPI_URL;
         }
       }
 

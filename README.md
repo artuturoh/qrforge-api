@@ -2,7 +2,7 @@
 
 [![Node.js Version](https://img.shields.io/badge/Node.js-%3E%3D18.0.0-339933?style=for-the-badge&logo=node.js)](https://nodejs.org/)
 [![Architecture](https://img.shields.io/badge/Architecture-100%25%20In--Memory%20%7C%20%3C10ms-10B981?style=for-the-badge)](https://github.com/artuturoh/qrforge-api)
-[![RapidAPI](https://img.shields.io/badge/RapidAPI-Verified%20Provider-0052CC?style=for-the-badge&logo=rapidapi)](https://rapidapi.com/artuturoh/api/qrforge-smart-qr-code-and-branded-payload-generator)
+[![RapidAPI](https://img.shields.io/badge/RapidAPI-Verified%20Provider-0052CC?style=for-the-badge&logo=rapidapi)](https://rapidapi.com/artuturoh/api/qrforge-smart-qr-code-and-custom-branding-generator)
 [![License](https://img.shields.io/badge/License-MIT-6366F1?style=for-the-badge)](LICENSE)
 
 **QRForge API** is an ultra-fast (<10ms latency), 100% in-memory microservice engineered for high-throughput, mission-critical applications. It features automated smart payload builders (Wi-Fi, WhatsApp, vCard 3.0, BIP21 Crypto, iCal events), dynamic SVG/PNG rendering, custom hex color palettes, centered branding badges with auto error-correction leveling, and a high-concurrency batch engine.

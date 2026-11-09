@@ -215,7 +215,7 @@ Synthesizes between 1 and 25 customized QR codes concurrently in-memory.
 
 ```javascript
 const RAPIDAPI_KEY = process.env.RAPIDAPI_KEY || 'YOUR_RAPIDAPI_KEY';
-const RAPIDAPI_HOST = 'qrforge-smart-qr-code-and-branded-payload-generator.p.rapidapi.com';
+const RAPIDAPI_HOST = 'qrforge-smart-qr-code-and-custom-branding-generator.p.rapidapi.com';
 
 async function generateBrandedQR() {
   const response = await fetch(`https://${RAPIDAPI_HOST}/v1/generate`, {
@@ -265,7 +265,7 @@ import os
 import requests
 
 RAPIDAPI_KEY = os.getenv("RAPIDAPI_KEY", "YOUR_RAPIDAPI_KEY")
-RAPIDAPI_HOST = "qrforge-smart-qr-code-and-branded-payload-generator.p.rapidapi.com"
+RAPIDAPI_HOST = "qrforge-smart-qr-code-and-custom-branding-generator.p.rapidapi.com"
 
 url = f"https://{RAPIDAPI_HOST}/v1/generate"
 
@@ -306,10 +306,10 @@ else:
 
 ```bash
 curl --request POST \
-  --url "https://qrforge-smart-qr-code-and-branded-payload-generator.p.rapidapi.com/v1/generate" \
+  --url "https://qrforge-smart-qr-code-and-custom-branding-generator.p.rapidapi.com/v1/generate" \
   --header "Content-Type: application/json" \
   --header "X-RapidAPI-Key: YOUR_RAPIDAPI_KEY" \
-  --header "X-RapidAPI-Host: qrforge-smart-qr-code-and-branded-payload-generator.p.rapidapi.com" \
+  --header "X-RapidAPI-Host: qrforge-smart-qr-code-and-custom-branding-generator.p.rapidapi.com" \
   --data '{
     "type": "crypto",
     "data": {

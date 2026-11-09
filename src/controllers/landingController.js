@@ -1,7 +1,7 @@
 import { getLandingHtml } from '../views/landingHtml.js';
 import { CONFIG } from '../config/constants.js';
 
-const RAPIDAPI_PLAYGROUND_URL = 'https://rapidapi.com/artuturoh/api/qrforge-smart-qr-code-and-custom-branding-generator/playground';
+const RAPIDAPI_URL = 'https://rapidapi.com/artuturoh/api/qrforge-smart-qr-code-and-custom-branding-generator';
 
 export function getRoot(req, res) {
   const acceptHeader = req.headers.accept || '';
@@ -21,8 +21,8 @@ export function getRoot(req, res) {
         batch: 'POST /v1/batch'
       },
       supportedTypes: CONFIG.PAYLOAD_TYPES,
-      documentation: RAPIDAPI_PLAYGROUND_URL,
-      rapidapi: RAPIDAPI_PLAYGROUND_URL
+      documentation: RAPIDAPI_URL,
+      rapidapi: RAPIDAPI_URL
     });
   }
 
