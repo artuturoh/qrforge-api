@@ -1,4 +1,6 @@
 export function getLandingHtml() {
+  const RAPIDAPI_PLAYGROUND_URL = 'https://rapidapi.com/artuturoh/api/qrforge-smart-qr-code-and-custom-branding-generator/playground';
+
   return `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -142,8 +144,14 @@ export function getLandingHtml() {
 
     .btn-rapidapi {
       background: linear-gradient(135deg, #0052CC, #172B4D);
-      border-color: #2684FF;
+      border: 1px solid #2684FF;
       color: #FFF;
+      box-shadow: 0 4px 15px rgba(0, 82, 204, 0.3);
+    }
+
+    .btn-rapidapi:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(38, 132, 255, 0.4);
     }
 
     /* Hero */
@@ -183,13 +191,15 @@ export function getLandingHtml() {
 
     .hero h1 {
       font-size: 3rem;
-      line-height: 1.15;
+      line-height: 1.18;
       font-weight: 800;
       letter-spacing: -0.03em;
       margin-bottom: 16px;
-      background: linear-gradient(135deg, #FFFFFF 30%, #94A3B8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: #FFFFFF;
+    }
+
+    .hero h1 .highlight {
+      color: #10B981;
     }
 
     .hero p {
@@ -524,12 +534,8 @@ export function getLandingHtml() {
         <span>QRForge API</span>
       </div>
       <div class="header-actions">
-        <a href="https://github.com/artuturoh/qrforge-api" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
-          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
-          GitHub
-        </a>
-        <a href="https://rapidapi.com/artuturoh/api/qrforge-smart-qr-code-and-branded-payload-generator" target="_blank" rel="noopener noreferrer" class="btn btn-rapidapi">
-          ⚡ RapidAPI
+        <a href="${RAPIDAPI_PLAYGROUND_URL}" target="_blank" rel="noopener noreferrer" class="btn btn-rapidapi">
+          ⚡ Connect on RapidAPI
         </a>
       </div>
     </div>
@@ -542,7 +548,7 @@ export function getLandingHtml() {
         <span class="pulsing-dot"></span>
         &lt; 5ms In-Memory Engine · Zero Database Dependencies
       </div>
-      <h1>Smart QR Code &amp; Custom Branding Engine</h1>
+      <h1>Smart QR Code &amp; <span class="highlight">Custom Branding</span> Engine</h1>
       <p>Generate high-density, production-grade QR codes with built-in payload templates (Wi-Fi, vCard, WhatsApp, Crypto), centered branding badges, and batch rendering.</p>
     </section>
 
@@ -589,7 +595,7 @@ export function getLandingHtml() {
         <div class="form-row">
           <div class="form-group">
             <label>Center Badge Text (Max 6)</label>
-            <input type="text" id="badgeText" placeholder="e.g. WIFI, VIP, SCAN" maxlength="6">
+            <input type="text" id="badgeText" value="PRO" placeholder="e.g. PRO, WIFI, VIP" maxlength="6">
           </div>
           <div class="form-group">
             <label>Output Format</label>
@@ -675,7 +681,7 @@ export function getLandingHtml() {
 
   <footer>
     <div class="container">
-      QRForge API &copy; 2026. Architected by <a href="https://github.com/artuturoh" target="_blank" rel="noopener noreferrer">artuturoh</a>. Distributed on RapidAPI.
+      QRForge API &copy; 2026. Powered by <a href="${RAPIDAPI_PLAYGROUND_URL}" target="_blank" rel="noopener noreferrer">RapidAPI Hub</a>. All rights reserved.
     </div>
   </footer>
 
@@ -683,6 +689,7 @@ export function getLandingHtml() {
     (function() {
       let currentFormat = 'svg';
       let lastResult = null;
+      const RAPIDAPI_PLAYGROUND_URL = '${RAPIDAPI_PLAYGROUND_URL}';
 
       const typeSelect = document.getElementById('typeSelect');
       const dynamicFields = document.getElementById('dynamicFields');
@@ -729,7 +736,7 @@ export function getLandingHtml() {
         url: () => \`
           <div class="form-group">
             <label>Target URL</label>
-            <input type="text" id="field_url" value="https://github.com/artuturoh/qrforge-api" placeholder="https://example.com">
+            <input type="text" id="field_url" value="\${RAPIDAPI_PLAYGROUND_URL}" placeholder="https://example.com">
           </div>
         \`,
         wifi: () => \`
@@ -759,7 +766,7 @@ export function getLandingHtml() {
           </div>
           <div class="form-group">
             <label>Pre-filled Message</label>
-            <input type="text" id="field_wa_msg" value="Hello! Inquiring about QRForge API." placeholder="Message text">
+            <input type="text" id="field_wa_msg" value="Hello! Inquiring about QRForge API on RapidAPI." placeholder="Message text">
           </div>
         \`,
         vcard: () => \`
@@ -814,12 +821,14 @@ export function getLandingHtml() {
       function renderTemplate() {
         const type = typeSelect.value;
         dynamicFields.innerHTML = templates[type] ? templates[type]() : '';
-        if (type === 'wifi') {
+        if (type === 'url') {
+          badgeText.value = 'PRO';
+        } else if (type === 'wifi') {
           badgeText.value = 'WIFI';
         } else if (type === 'crypto') {
           badgeText.value = 'PAY';
         } else if (badgeText.value === 'WIFI' || badgeText.value === 'PAY') {
-          badgeText.value = '';
+          badgeText.value = 'PRO';
         }
       }
 
@@ -857,7 +866,7 @@ export function getLandingHtml() {
               amount: document.getElementById('field_cr_amount').value
             };
           default:
-            return 'https://github.com/artuturoh/qrforge-api';
+            return RAPIDAPI_PLAYGROUND_URL;
         }
       }
 
